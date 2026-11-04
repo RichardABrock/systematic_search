@@ -109,7 +109,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(httr, <span class="at">quietly =</span> <span class="cn">TRUE</span>) <span class="co"># For lit review</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(httr2, <span class="at">quietly =</span> <span class="cn">TRUE</span>) </span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(xml2, <span class="at">quietly =</span> <span class="cn">TRUE</span>) </span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(openalexR, <span class="at">quietly =</span> <span class="cn">TRUE</span>)</span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(jsonlite, <span class="at">quietly =</span> <span class="cn">TRUE</span>) <span class="co"># For lit review</span></span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gt, <span class="at">quietly =</span> <span class="cn">TRUE</span>)</span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse, <span class="at">quietly =</span> <span class="cn">TRUE</span>) </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -159,23 +159,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">gt</span>(<span class="fu">head</span>(findings, <span class="at">n =</span> <span class="dv">10</span>)) </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
-<div id="xekiuycuik" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#xekiuycuik table {
+<div id="uxggdsnhqg" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#uxggdsnhqg table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#xekiuycuik thead, #xekiuycuik tbody, #xekiuycuik tfoot, #xekiuycuik tr, #xekiuycuik td, #xekiuycuik th {
+#uxggdsnhqg thead, #uxggdsnhqg tbody, #uxggdsnhqg tfoot, #uxggdsnhqg tr, #uxggdsnhqg td, #uxggdsnhqg th {
   border-style: none;
 }
 
-#xekiuycuik p {
+#uxggdsnhqg p {
   margin: 0;
   padding: 0;
 }
 
-#xekiuycuik .gt_table {
+#uxggdsnhqg .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -201,12 +201,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-left-color: #D3D3D3;
 }
 
-#xekiuycuik .gt_caption {
+#uxggdsnhqg .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#xekiuycuik .gt_title {
+#uxggdsnhqg .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -218,7 +218,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-width: 0;
 }
 
-#xekiuycuik .gt_subtitle {
+#uxggdsnhqg .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -230,7 +230,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-width: 0;
 }
 
-#xekiuycuik .gt_heading {
+#uxggdsnhqg .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -242,13 +242,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#xekiuycuik .gt_bottom_border {
+#uxggdsnhqg .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#xekiuycuik .gt_col_headings {
+#uxggdsnhqg .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -263,7 +263,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#xekiuycuik .gt_col_heading {
+#uxggdsnhqg .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -283,7 +283,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#xekiuycuik .gt_column_spanner_outer {
+#uxggdsnhqg .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -295,15 +295,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 4px;
 }
 
-#xekiuycuik .gt_column_spanner_outer:first-child {
+#uxggdsnhqg .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#xekiuycuik .gt_column_spanner_outer:last-child {
+#uxggdsnhqg .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#xekiuycuik .gt_column_spanner {
+#uxggdsnhqg .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -315,11 +315,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   width: 100%;
 }
 
-#xekiuycuik .gt_spanner_row {
+#uxggdsnhqg .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#xekiuycuik .gt_group_heading {
+#uxggdsnhqg .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -345,7 +345,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   text-align: left;
 }
 
-#xekiuycuik .gt_empty_group_heading {
+#uxggdsnhqg .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -360,15 +360,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: middle;
 }
 
-#xekiuycuik .gt_from_md > :first-child {
+#uxggdsnhqg .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#xekiuycuik .gt_from_md > :last-child {
+#uxggdsnhqg .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#xekiuycuik .gt_row {
+#uxggdsnhqg .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -387,7 +387,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#xekiuycuik .gt_stub {
+#uxggdsnhqg .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -400,7 +400,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#xekiuycuik .gt_stub_row_group {
+#uxggdsnhqg .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -414,15 +414,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: top;
 }
 
-#xekiuycuik .gt_row_group_first td {
+#uxggdsnhqg .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#xekiuycuik .gt_row_group_first th {
+#uxggdsnhqg .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#xekiuycuik .gt_summary_row {
+#uxggdsnhqg .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -432,16 +432,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#xekiuycuik .gt_first_summary_row {
+#uxggdsnhqg .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#xekiuycuik .gt_first_summary_row.thick {
+#uxggdsnhqg .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#xekiuycuik .gt_last_summary_row {
+#uxggdsnhqg .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -451,7 +451,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#xekiuycuik .gt_grand_summary_row {
+#uxggdsnhqg .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -461,7 +461,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#xekiuycuik .gt_first_grand_summary_row {
+#uxggdsnhqg .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -471,7 +471,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-color: #D3D3D3;
 }
 
-#xekiuycuik .gt_last_grand_summary_row_top {
+#uxggdsnhqg .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -481,11 +481,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#xekiuycuik .gt_striped {
+#uxggdsnhqg .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#xekiuycuik .gt_table_body {
+#uxggdsnhqg .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -494,7 +494,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#xekiuycuik .gt_footnotes {
+#uxggdsnhqg .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -508,7 +508,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#xekiuycuik .gt_footnote {
+#uxggdsnhqg .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -517,7 +517,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#xekiuycuik .gt_sourcenotes {
+#uxggdsnhqg .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -531,7 +531,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#xekiuycuik .gt_sourcenote {
+#uxggdsnhqg .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -539,72 +539,72 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#xekiuycuik .gt_left {
+#uxggdsnhqg .gt_left {
   text-align: left;
 }
 
-#xekiuycuik .gt_center {
+#uxggdsnhqg .gt_center {
   text-align: center;
 }
 
-#xekiuycuik .gt_right {
+#uxggdsnhqg .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#xekiuycuik .gt_font_normal {
+#uxggdsnhqg .gt_font_normal {
   font-weight: normal;
 }
 
-#xekiuycuik .gt_font_bold {
+#uxggdsnhqg .gt_font_bold {
   font-weight: bold;
 }
 
-#xekiuycuik .gt_font_italic {
+#uxggdsnhqg .gt_font_italic {
   font-style: italic;
 }
 
-#xekiuycuik .gt_super {
+#uxggdsnhqg .gt_super {
   font-size: 65%;
 }
 
-#xekiuycuik .gt_footnote_marks {
+#uxggdsnhqg .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#xekiuycuik .gt_asterisk {
+#uxggdsnhqg .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#xekiuycuik .gt_indent_1 {
+#uxggdsnhqg .gt_indent_1 {
   text-indent: 5px;
 }
 
-#xekiuycuik .gt_indent_2 {
+#uxggdsnhqg .gt_indent_2 {
   text-indent: 10px;
 }
 
-#xekiuycuik .gt_indent_3 {
+#uxggdsnhqg .gt_indent_3 {
   text-indent: 15px;
 }
 
-#xekiuycuik .gt_indent_4 {
+#uxggdsnhqg .gt_indent_4 {
   text-indent: 20px;
 }
 
-#xekiuycuik .gt_indent_5 {
+#uxggdsnhqg .gt_indent_5 {
   text-indent: 25px;
 }
 
-#xekiuycuik .katex-display {
+#uxggdsnhqg .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#xekiuycuik div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#uxggdsnhqg div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -682,23 +682,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">gt</span>(<span class="fu">head</span>(<span class="fu">as.data.frame</span>(abstracts), <span class="at">n=</span><span class="dv">10</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
-<div id="zraunfeycl" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#zraunfeycl table {
+<div id="anmbgfgkph" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#anmbgfgkph table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#zraunfeycl thead, #zraunfeycl tbody, #zraunfeycl tfoot, #zraunfeycl tr, #zraunfeycl td, #zraunfeycl th {
+#anmbgfgkph thead, #anmbgfgkph tbody, #anmbgfgkph tfoot, #anmbgfgkph tr, #anmbgfgkph td, #anmbgfgkph th {
   border-style: none;
 }
 
-#zraunfeycl p {
+#anmbgfgkph p {
   margin: 0;
   padding: 0;
 }
 
-#zraunfeycl .gt_table {
+#anmbgfgkph .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -724,12 +724,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-left-color: #D3D3D3;
 }
 
-#zraunfeycl .gt_caption {
+#anmbgfgkph .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#zraunfeycl .gt_title {
+#anmbgfgkph .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -741,7 +741,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-width: 0;
 }
 
-#zraunfeycl .gt_subtitle {
+#anmbgfgkph .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -753,7 +753,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-width: 0;
 }
 
-#zraunfeycl .gt_heading {
+#anmbgfgkph .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -765,13 +765,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#zraunfeycl .gt_bottom_border {
+#anmbgfgkph .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#zraunfeycl .gt_col_headings {
+#anmbgfgkph .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -786,7 +786,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#zraunfeycl .gt_col_heading {
+#anmbgfgkph .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -806,7 +806,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#zraunfeycl .gt_column_spanner_outer {
+#anmbgfgkph .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -818,15 +818,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 4px;
 }
 
-#zraunfeycl .gt_column_spanner_outer:first-child {
+#anmbgfgkph .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#zraunfeycl .gt_column_spanner_outer:last-child {
+#anmbgfgkph .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#zraunfeycl .gt_column_spanner {
+#anmbgfgkph .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -838,11 +838,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   width: 100%;
 }
 
-#zraunfeycl .gt_spanner_row {
+#anmbgfgkph .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#zraunfeycl .gt_group_heading {
+#anmbgfgkph .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -868,7 +868,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   text-align: left;
 }
 
-#zraunfeycl .gt_empty_group_heading {
+#anmbgfgkph .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -883,15 +883,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: middle;
 }
 
-#zraunfeycl .gt_from_md > :first-child {
+#anmbgfgkph .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#zraunfeycl .gt_from_md > :last-child {
+#anmbgfgkph .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#zraunfeycl .gt_row {
+#anmbgfgkph .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -910,7 +910,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#zraunfeycl .gt_stub {
+#anmbgfgkph .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -923,7 +923,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#zraunfeycl .gt_stub_row_group {
+#anmbgfgkph .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -937,15 +937,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: top;
 }
 
-#zraunfeycl .gt_row_group_first td {
+#anmbgfgkph .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#zraunfeycl .gt_row_group_first th {
+#anmbgfgkph .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#zraunfeycl .gt_summary_row {
+#anmbgfgkph .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -955,16 +955,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#zraunfeycl .gt_first_summary_row {
+#anmbgfgkph .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#zraunfeycl .gt_first_summary_row.thick {
+#anmbgfgkph .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#zraunfeycl .gt_last_summary_row {
+#anmbgfgkph .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -974,7 +974,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#zraunfeycl .gt_grand_summary_row {
+#anmbgfgkph .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -984,7 +984,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#zraunfeycl .gt_first_grand_summary_row {
+#anmbgfgkph .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -994,7 +994,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-color: #D3D3D3;
 }
 
-#zraunfeycl .gt_last_grand_summary_row_top {
+#anmbgfgkph .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1004,11 +1004,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#zraunfeycl .gt_striped {
+#anmbgfgkph .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#zraunfeycl .gt_table_body {
+#anmbgfgkph .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1017,7 +1017,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#zraunfeycl .gt_footnotes {
+#anmbgfgkph .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1031,7 +1031,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#zraunfeycl .gt_footnote {
+#anmbgfgkph .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1040,7 +1040,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#zraunfeycl .gt_sourcenotes {
+#anmbgfgkph .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1054,7 +1054,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#zraunfeycl .gt_sourcenote {
+#anmbgfgkph .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1062,72 +1062,72 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#zraunfeycl .gt_left {
+#anmbgfgkph .gt_left {
   text-align: left;
 }
 
-#zraunfeycl .gt_center {
+#anmbgfgkph .gt_center {
   text-align: center;
 }
 
-#zraunfeycl .gt_right {
+#anmbgfgkph .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#zraunfeycl .gt_font_normal {
+#anmbgfgkph .gt_font_normal {
   font-weight: normal;
 }
 
-#zraunfeycl .gt_font_bold {
+#anmbgfgkph .gt_font_bold {
   font-weight: bold;
 }
 
-#zraunfeycl .gt_font_italic {
+#anmbgfgkph .gt_font_italic {
   font-style: italic;
 }
 
-#zraunfeycl .gt_super {
+#anmbgfgkph .gt_super {
   font-size: 65%;
 }
 
-#zraunfeycl .gt_footnote_marks {
+#anmbgfgkph .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#zraunfeycl .gt_asterisk {
+#anmbgfgkph .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#zraunfeycl .gt_indent_1 {
+#anmbgfgkph .gt_indent_1 {
   text-indent: 5px;
 }
 
-#zraunfeycl .gt_indent_2 {
+#anmbgfgkph .gt_indent_2 {
   text-indent: 10px;
 }
 
-#zraunfeycl .gt_indent_3 {
+#anmbgfgkph .gt_indent_3 {
   text-indent: 15px;
 }
 
-#zraunfeycl .gt_indent_4 {
+#anmbgfgkph .gt_indent_4 {
   text-indent: 20px;
 }
 
-#zraunfeycl .gt_indent_5 {
+#anmbgfgkph .gt_indent_5 {
   text-indent: 25px;
 }
 
-#zraunfeycl .katex-display {
+#anmbgfgkph .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#zraunfeycl div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#anmbgfgkph div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -1243,23 +1243,23 @@ argument is not an atomic vector; coercing</code></pre>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">gt</span>(<span class="fu">head</span>(results, <span class="at">n =</span> <span class="dv">10</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
-<div id="acthulckjn" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#acthulckjn table {
+<div id="rgcomotgjm" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#rgcomotgjm table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#acthulckjn thead, #acthulckjn tbody, #acthulckjn tfoot, #acthulckjn tr, #acthulckjn td, #acthulckjn th {
+#rgcomotgjm thead, #rgcomotgjm tbody, #rgcomotgjm tfoot, #rgcomotgjm tr, #rgcomotgjm td, #rgcomotgjm th {
   border-style: none;
 }
 
-#acthulckjn p {
+#rgcomotgjm p {
   margin: 0;
   padding: 0;
 }
 
-#acthulckjn .gt_table {
+#rgcomotgjm .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1285,12 +1285,12 @@ argument is not an atomic vector; coercing</code></pre>
   border-left-color: #D3D3D3;
 }
 
-#acthulckjn .gt_caption {
+#rgcomotgjm .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#acthulckjn .gt_title {
+#rgcomotgjm .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1302,7 +1302,7 @@ argument is not an atomic vector; coercing</code></pre>
   border-bottom-width: 0;
 }
 
-#acthulckjn .gt_subtitle {
+#rgcomotgjm .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1314,7 +1314,7 @@ argument is not an atomic vector; coercing</code></pre>
   border-top-width: 0;
 }
 
-#acthulckjn .gt_heading {
+#rgcomotgjm .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1326,13 +1326,13 @@ argument is not an atomic vector; coercing</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#acthulckjn .gt_bottom_border {
+#rgcomotgjm .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#acthulckjn .gt_col_headings {
+#rgcomotgjm .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1347,7 +1347,7 @@ argument is not an atomic vector; coercing</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#acthulckjn .gt_col_heading {
+#rgcomotgjm .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1367,7 +1367,7 @@ argument is not an atomic vector; coercing</code></pre>
   overflow-x: hidden;
 }
 
-#acthulckjn .gt_column_spanner_outer {
+#rgcomotgjm .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1379,15 +1379,15 @@ argument is not an atomic vector; coercing</code></pre>
   padding-right: 4px;
 }
 
-#acthulckjn .gt_column_spanner_outer:first-child {
+#rgcomotgjm .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#acthulckjn .gt_column_spanner_outer:last-child {
+#rgcomotgjm .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#acthulckjn .gt_column_spanner {
+#rgcomotgjm .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1399,11 +1399,11 @@ argument is not an atomic vector; coercing</code></pre>
   width: 100%;
 }
 
-#acthulckjn .gt_spanner_row {
+#rgcomotgjm .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#acthulckjn .gt_group_heading {
+#rgcomotgjm .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1429,7 +1429,7 @@ argument is not an atomic vector; coercing</code></pre>
   text-align: left;
 }
 
-#acthulckjn .gt_empty_group_heading {
+#rgcomotgjm .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1444,15 +1444,15 @@ argument is not an atomic vector; coercing</code></pre>
   vertical-align: middle;
 }
 
-#acthulckjn .gt_from_md > :first-child {
+#rgcomotgjm .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#acthulckjn .gt_from_md > :last-child {
+#rgcomotgjm .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#acthulckjn .gt_row {
+#rgcomotgjm .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1471,7 +1471,7 @@ argument is not an atomic vector; coercing</code></pre>
   overflow-x: hidden;
 }
 
-#acthulckjn .gt_stub {
+#rgcomotgjm .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1484,7 +1484,7 @@ argument is not an atomic vector; coercing</code></pre>
   padding-right: 5px;
 }
 
-#acthulckjn .gt_stub_row_group {
+#rgcomotgjm .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1498,15 +1498,15 @@ argument is not an atomic vector; coercing</code></pre>
   vertical-align: top;
 }
 
-#acthulckjn .gt_row_group_first td {
+#rgcomotgjm .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#acthulckjn .gt_row_group_first th {
+#rgcomotgjm .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#acthulckjn .gt_summary_row {
+#rgcomotgjm .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1516,16 +1516,16 @@ argument is not an atomic vector; coercing</code></pre>
   padding-right: 5px;
 }
 
-#acthulckjn .gt_first_summary_row {
+#rgcomotgjm .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#acthulckjn .gt_first_summary_row.thick {
+#rgcomotgjm .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#acthulckjn .gt_last_summary_row {
+#rgcomotgjm .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1535,7 +1535,7 @@ argument is not an atomic vector; coercing</code></pre>
   border-bottom-color: #D3D3D3;
 }
 
-#acthulckjn .gt_grand_summary_row {
+#rgcomotgjm .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1545,7 +1545,7 @@ argument is not an atomic vector; coercing</code></pre>
   padding-right: 5px;
 }
 
-#acthulckjn .gt_first_grand_summary_row {
+#rgcomotgjm .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1555,7 +1555,7 @@ argument is not an atomic vector; coercing</code></pre>
   border-top-color: #D3D3D3;
 }
 
-#acthulckjn .gt_last_grand_summary_row_top {
+#rgcomotgjm .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1565,11 +1565,11 @@ argument is not an atomic vector; coercing</code></pre>
   border-bottom-color: #D3D3D3;
 }
 
-#acthulckjn .gt_striped {
+#rgcomotgjm .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#acthulckjn .gt_table_body {
+#rgcomotgjm .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1578,7 +1578,7 @@ argument is not an atomic vector; coercing</code></pre>
   border-bottom-color: #D3D3D3;
 }
 
-#acthulckjn .gt_footnotes {
+#rgcomotgjm .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1592,7 +1592,7 @@ argument is not an atomic vector; coercing</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#acthulckjn .gt_footnote {
+#rgcomotgjm .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1601,7 +1601,7 @@ argument is not an atomic vector; coercing</code></pre>
   padding-right: 5px;
 }
 
-#acthulckjn .gt_sourcenotes {
+#rgcomotgjm .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1615,7 +1615,7 @@ argument is not an atomic vector; coercing</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#acthulckjn .gt_sourcenote {
+#rgcomotgjm .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1623,72 +1623,72 @@ argument is not an atomic vector; coercing</code></pre>
   padding-right: 5px;
 }
 
-#acthulckjn .gt_left {
+#rgcomotgjm .gt_left {
   text-align: left;
 }
 
-#acthulckjn .gt_center {
+#rgcomotgjm .gt_center {
   text-align: center;
 }
 
-#acthulckjn .gt_right {
+#rgcomotgjm .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#acthulckjn .gt_font_normal {
+#rgcomotgjm .gt_font_normal {
   font-weight: normal;
 }
 
-#acthulckjn .gt_font_bold {
+#rgcomotgjm .gt_font_bold {
   font-weight: bold;
 }
 
-#acthulckjn .gt_font_italic {
+#rgcomotgjm .gt_font_italic {
   font-style: italic;
 }
 
-#acthulckjn .gt_super {
+#rgcomotgjm .gt_super {
   font-size: 65%;
 }
 
-#acthulckjn .gt_footnote_marks {
+#rgcomotgjm .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#acthulckjn .gt_asterisk {
+#rgcomotgjm .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#acthulckjn .gt_indent_1 {
+#rgcomotgjm .gt_indent_1 {
   text-indent: 5px;
 }
 
-#acthulckjn .gt_indent_2 {
+#rgcomotgjm .gt_indent_2 {
   text-indent: 10px;
 }
 
-#acthulckjn .gt_indent_3 {
+#rgcomotgjm .gt_indent_3 {
   text-indent: 15px;
 }
 
-#acthulckjn .gt_indent_4 {
+#rgcomotgjm .gt_indent_4 {
   text-indent: 20px;
 }
 
-#acthulckjn .gt_indent_5 {
+#rgcomotgjm .gt_indent_5 {
   text-indent: 25px;
 }
 
-#acthulckjn .katex-display {
+#rgcomotgjm .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#acthulckjn div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#rgcomotgjm div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -1740,32 +1740,32 @@ argument is not an atomic vector; coercing</code></pre>
 <td class="gt_row gt_right" headers="date">2004</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_left" headers="hal_id">halshs-00553076</td>
-<td class="gt_row gt_left" headers="title">Emotion</td>
-<td class="gt_row gt_left" headers="abstract">Une longue tradition associe, en Occident, l'émotion à l'expérience religieuse dans ce qu'elle a de plus universel. Mais l'arrière-plan théologique et les rapports sociaux de domination qui incitent à opposer l'émotion à la raison et à l'institution comme on oppose le corps à l'esprit, ont introduit de nombreux biais dans la compréhension sociologique des émotions religieuses. Après un retour sur les écrits fondateurs de Durkheim et Weber, cet article examine les travaux plus récents qui invitent à prendre pour objet le contenu concret - et divers - des émotions en religion, en les re-situant notamment dans le cadre des relations entre individu et institution.; Emotion has been for long associated with religion in Western minds. But the theological background and the patterns of social domination that tend to oppose emotion to rationality and institution as the body is opposed to the mind, have introduced many biases in the sociological approach of religious emotions. After examining the foundational works of Durkheim and Weber, this article looks at more recent authors who invite to analyze the concret contents and the diversity of emotions in religion, notably in connection with the contemporary evolutions of individuals/institution relationships.</td>
-<td class="gt_row gt_left" headers="doi">NA</td>
-<td class="gt_row gt_right" headers="date">2010-11</td>
-</tr>
-<tr class="odd">
 <td class="gt_row gt_left" headers="hal_id">hal-04096040</td>
 <td class="gt_row gt_left" headers="title">L’émotion comme matière muséale; Emotion as museum material</td>
 <td class="gt_row gt_left" headers="abstract">Bienvenue dans Émotion, un podcast de l’Ocim « à l’écoute des savoirs ». Les musées et les lieux de culture scientifique sont vivants : ils font dialoguer des savoirs, des expériences mais aussi des émotions. Ainsi, une exposition, une médiation, un objet de collection, un dispositif numérique peuvent tour à tour susciter joie, surprise, peur, déception ou encore confiance. Les professionnel·les qui les conçoivent et les animent sont aussi traversé·es par une foule d’émotions : ardeur, espérance, satisfaction, mais aussi doute, irritation ou encore surcharge par exemple. Dans ce podcast, l’Ocim se met à l’écoute des émotions : à travers 8 épisodes, nous voyageons au cœur des musées et de ce qui anime l’humain grâce à la parole de professionnel·les et de chercheur·es engagé·es. "L'émotion comme matière muséale est le no 1 (11 min38). Ce podcast est accompagné de ressources documentaires sur le site de l'OCIM (https://podcast.ocim.fr/themes/emotion/); Welcome to Emotion, an Ocim podcast about "listening to knowledge". Museums and centres for scientific culture are living places: they bring together knowledge, experiences and emotions. So an exhibition, a form of mediation, a collection object or a digital device can in turn arouse joy, surprise, fear, disappointment or even confidence. The professionals who design and run them are also affected by a host of emotions: enthusiasm, hope, satisfaction, but also doubt, irritation or overload, for example. In this podcast, Ocim listens to the emotions: in 8 episodes, we travel to the heart of museums and what drives human beings, thanks to the words of committed professionals and researchers. L'émotion comme matière muséale" is episode 1 (11 min 38). This podcast is accompanied by documentary resources on the OCIM website (https://podcast.ocim.fr/themes/emotion/)</td>
 <td class="gt_row gt_left" headers="doi">NA</td>
 <td class="gt_row gt_right" headers="date">2020-12-15</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td class="gt_row gt_left" headers="hal_id">hal-04547526</td>
 <td class="gt_row gt_left" headers="title">Écrire l'émotion, apprendre à écrire l'émotion</td>
 <td class="gt_row gt_left" headers="abstract">NA</td>
 <td class="gt_row gt_left" headers="doi">NA</td>
 <td class="gt_row gt_right" headers="date">2000</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td class="gt_row gt_left" headers="hal_id">hal-04547684</td>
 <td class="gt_row gt_left" headers="title">Écrire l'émotion, apprendre à écrire l'émotion</td>
 <td class="gt_row gt_left" headers="abstract">NA</td>
 <td class="gt_row gt_left" headers="doi">NA</td>
 <td class="gt_row gt_right" headers="date">2000</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="hal_id">halshs-00553076</td>
+<td class="gt_row gt_left" headers="title">Emotion</td>
+<td class="gt_row gt_left" headers="abstract">Une longue tradition associe, en Occident, l'émotion à l'expérience religieuse dans ce qu'elle a de plus universel. Mais l'arrière-plan théologique et les rapports sociaux de domination qui incitent à opposer l'émotion à la raison et à l'institution comme on oppose le corps à l'esprit, ont introduit de nombreux biais dans la compréhension sociologique des émotions religieuses. Après un retour sur les écrits fondateurs de Durkheim et Weber, cet article examine les travaux plus récents qui invitent à prendre pour objet le contenu concret - et divers - des émotions en religion, en les re-situant notamment dans le cadre des relations entre individu et institution.; Emotion has been for long associated with religion in Western minds. But the theological background and the patterns of social domination that tend to oppose emotion to rationality and institution as the body is opposed to the mind, have introduced many biases in the sociological approach of religious emotions. After examining the foundational works of Durkheim and Weber, this article looks at more recent authors who invite to analyze the concret contents and the diversity of emotions in religion, notably in connection with the contemporary evolutions of individuals/institution relationships.</td>
+<td class="gt_row gt_left" headers="doi">NA</td>
+<td class="gt_row gt_right" headers="date">2010-11</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="hal_id">hal-01314720</td>
@@ -1892,23 +1892,532 @@ argument is not an atomic vector; coercing</code></pre>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># gt(head(cairn_data_searched %&gt;% select(title, author, journal, abstract), n = 10))</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
+<section id="google-scholar-search-using-openalex" class="level2">
+<h2 class="anchored" data-anchor-id="google-scholar-search-using-openalex">Google Scholar search using OpenAlex</h2>
+<p>But it looks like we can do Google Scholar in general</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>results <span class="ot">&lt;-</span> <span class="fu">oa_fetch</span>(</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">entity =</span> <span class="st">"works"</span>,</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">search =</span> <span class="st">"emotions AND </span><span class="sc">\"</span><span class="st">modern foreign languages</span><span class="sc">\"</span><span class="st">"</span>,</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">count_only =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">options =</span> <span class="fu">oa_options</span>(<span class="at">per_page =</span> <span class="dv">20</span>))</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a><span class="co"># clean data frame </span></span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a><span class="fu">gt</span>(<span class="fu">head</span>(results <span class="sc">%&gt;%</span> <span class="fu">select</span>(title, abstract, source_display_name)))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div id="tgjbhmkkau" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#tgjbhmkkau table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#tgjbhmkkau thead, #tgjbhmkkau tbody, #tgjbhmkkau tfoot, #tgjbhmkkau tr, #tgjbhmkkau td, #tgjbhmkkau th {
+  border-style: none;
+}
+
+#tgjbhmkkau p {
+  margin: 0;
+  padding: 0;
+}
+
+#tgjbhmkkau .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#tgjbhmkkau .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#tgjbhmkkau .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#tgjbhmkkau .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#tgjbhmkkau .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#tgjbhmkkau .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#tgjbhmkkau .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#tgjbhmkkau .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#tgjbhmkkau .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#tgjbhmkkau .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#tgjbhmkkau .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#tgjbhmkkau .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#tgjbhmkkau .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#tgjbhmkkau .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#tgjbhmkkau .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#tgjbhmkkau .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#tgjbhmkkau .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#tgjbhmkkau .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#tgjbhmkkau .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#tgjbhmkkau .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#tgjbhmkkau .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#tgjbhmkkau .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#tgjbhmkkau .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#tgjbhmkkau .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#tgjbhmkkau .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#tgjbhmkkau .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#tgjbhmkkau .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#tgjbhmkkau .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#tgjbhmkkau .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#tgjbhmkkau .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#tgjbhmkkau .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#tgjbhmkkau .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#tgjbhmkkau .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#tgjbhmkkau .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#tgjbhmkkau .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#tgjbhmkkau .gt_left {
+  text-align: left;
+}
+
+#tgjbhmkkau .gt_center {
+  text-align: center;
+}
+
+#tgjbhmkkau .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#tgjbhmkkau .gt_font_normal {
+  font-weight: normal;
+}
+
+#tgjbhmkkau .gt_font_bold {
+  font-weight: bold;
+}
+
+#tgjbhmkkau .gt_font_italic {
+  font-style: italic;
+}
+
+#tgjbhmkkau .gt_super {
+  font-size: 65%;
+}
+
+#tgjbhmkkau .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#tgjbhmkkau .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#tgjbhmkkau .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#tgjbhmkkau .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#tgjbhmkkau .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#tgjbhmkkau .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#tgjbhmkkau .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#tgjbhmkkau .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#tgjbhmkkau div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+
+<table class="gt_table caption-top table table-sm table-striped small" data-quarto-bootstrap="false">
+<thead>
+<tr class="gt_col_headings header">
+<th id="title" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">title</th>
+<th id="abstract" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">abstract</th>
+<th id="source_display_name" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">source_display_name</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="title">Measuring the results of teaching in the field of modern foreign languages</td>
+<td class="gt_row gt_left" headers="abstract">NA</td>
+<td class="gt_row gt_left" headers="source_display_name">Iowa Research Online (The University of Iowa)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="title">University of Illinois modern foreign language newsletter. 23-27</td>
+<td class="gt_row gt_left" headers="abstract">Made available in DSpace on 2011-09-15T14:33:53Z (GMT). No. of bitstreams: 2 universityofilli2327univ.pdf: 16128975 bytes, checksum: 292dc941800855d85d9051e104cb1c3f (MD5) license.txt: 4922 bytes, checksum: 910b249b4beec47e7ab768910c8f966f (MD5) Previous issue date: 19</td>
+<td class="gt_row gt_left" headers="source_display_name">Illinois Digital Environment for Access to Learning and Scholarship (University of Illinois at Urbana-Champaign)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="title">Approaches to Boost Foreign Language Learners’ Positive Emotions: A Qualitative Study on Learners’ and Teachers’ Perspectives in the Modern Foreign Language Context in England</td>
+<td class="gt_row gt_left" headers="abstract">This study builds on insights into the crucial role learner emotions play in their flourishing. It investigates learners’ and teachers’ perspectives on how to enhance positive emotions both inside and outside modern foreign language classrooms in England, amidst a language crisis and reduced modern foreign language uptake across the United Kingdom. A thematic qualitative text analysis of 18 semi-structured interviews with secondary-level teachers and learners from 7 schools across England revealed that both learners and teachers emphasise the significant impact of teachers on fostering positive emotions in the classroom. They also showed that students lack awareness of the benefits of learning languages beyond English. Furthermore, the interview data suggests that the government, schools, school leaders, and parents must also engage to elevate the status of modern foreign languages and promote positive social change.</td>
+<td class="gt_row gt_left" headers="source_display_name">Language Teaching Research</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="title">National Curriculum Subjects are Repositories of Values that are Under-Explored</td>
+<td class="gt_row gt_left" headers="abstract">This chapter looks at the values of a small number of teachers in secondary schools, and explores their values concerns in the light of recent curriculum developments. In 1988, a National Curriculum for England and Wales, was introduced by the education reform act (ERA). This Act introduced nine National Curriculum subjects for youngsters from five-14, with the addition of RE and, at 14, Modern foreign languages. This curriculum was subsequently updated in September 2000. ERAs intention was to determine subject matter and assessment for the school curriculum for all state educated pupils between the ages of five and 16. The research was designed to identify and explore the impact of motivational influences, values and practice on the secondary school teacher. Goodson's promotion of the 'teacher's voice' offered insight into the world of the teacher by assuming that the teacher was a complete human being, with emotions, friends, family and a life that wasn't completely bound and defined by school.</td>
+<td class="gt_row gt_left" headers="source_display_name">Routledge eBooks</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="title">An investigation into attitudinal responses of years nine, ten and eleven students towards the programmes of study of the modern foreign languages national curriculum in three west Essex 11-16 LM comprehensive schools</td>
+<td class="gt_row gt_left" headers="abstract">Questions which prompted interest in this area of research in 1988 Has the introduction of the National Curriculum with its concomitant statutory requirements made any measurable difference to students' responses to MFL classroom activities? If so, then in what way and to what extent might MFL study be now more (or less) appealing to more able 13-15 year-old students in local 11-16 LM Comprehensives? The last large-scale attempt to explore pupils' views on MFL classroom activities was in 1985, as part of the Assessment of Performance Unit (APU) surveys in Secondary Schools. There has been no attempt using the techniques of applied research to investigate pupils' views since the introduction of GCSE or indeed the National Curriculum. Despite this the research of Chambers, Clarke and Stables and Wikeley in the 1990s provided significant insight into the health of the subject at secondary level. Many of the concerns raised in these works are echoed in action research based in local schools in West Essex-in particular, the impact of target language teaching, the question of relevancy and the declining popularity of Languages. The research aims to record students' responses to the PoS and to find possible reasons for these constructs. The results will be compared with other findings including those of the APU from 1985. Using the Programme of Study as a means of measurement seems a worthwhile starting point. This statutory requirement of the National Curriculum forms a blueprint for MFL teaching and learning and could constitute the framework of an investigation into student responses to MFL tasks and skills. Furthermore, teachers teach increasingly by consensus. Professionals should constantly seek to exploit better the preferred learning activities of their students; if MFL staff do not know what these are they need a working model to find out this information. The research also makes use of APU questionnaires to assess the perceived enjoyment, usefulness and difficulty of MFL study as well as measuring the level of desired contact with other European students. Findings of the investigation in 2000. Many of the findings of this study may be said to report favourably on aspects of the PoS inMFL. Among the more positive responses were: • communicating with each other in pairs and groups, and with their teacher. This largely underlined the popularity of role-plays; • developing understanding and skills through a range of language activities, e.g. games, role-play, surveys and other investigations discuss their own ideas. Discuss interests and experiences and compare them with those of others. Listen, read or view for personal interest and enjoyment, as well as for information This reflected the preference of many teenagers for exercising a degree of control in the pace and direction of the tasks set; • listening and responding to different types of spoken language. Skimming and scanning texts, including databases where appropriate, for information. This suggests that such exercises are popular for reasons that are likely to be related to pace of work; • using a range of resources for communicating, e.g. telephone, electronic mail, fax, letters; • redrafting writing to improve its accuracy and presentation, e.g. by wordprocessing. Using dictionaries and reference materials. Students are not always comfortable with the seemingly random nature of language and welcome quick methods of eliminating doubt and establishing accuracy; • Express agreement, disagreement, personal feeling and opinions. Learning by heart phrases and short extracts, e.g. rhymes, poems, songs, jokes, tongue twisters. Pupils enjoy such activities but are critical when the material is unappealing. However, many of the findings indicated less positive experiences of the students in MFL. These included: • A significantly low level of perceived enjoyment in MFL study among average and more able students in all three schools in the study falling from an already \\O\\,v base in Year 9 to lower levels in Year 10 and Year 11; • This experience is often more pronounced in MFL than in other GCSE subjects; • A reluctance to use the target language as a means of communication. Elements of the PoS most strongly connected to this finding were: using language for real purposes, as well as to practise skills, using everyday classroom events as a context for spontaneous speech, initiating and developing conversations, developing strategies for dealing with the unpredictable, producing a variety of types of writing, asking about meanings, seek clarification or repetition in the TL. • Teachers do not always accurately assess the popularity or unpopularity of MFL classroom tasks; • Definitions of difficulty are often determined by levels of motivation; • The desire for contact with the target language community is minimal and there are low levels of integrative motivation in all three schools; • Ethnocentricity does not appear to contribute to this; • Comparisons with 1985 APU findings indicate a far more negative outlook for MFL study in some West Essex schools with virtually no interest in post 16 MFL study.</td>
+<td class="gt_row gt_left" headers="source_display_name">Middlesex University Research Repository (Middlesex University Of London)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="title">Measuring Motivation in English Schools: The Appeal of Self-Determination Theory</td>
+<td class="gt_row gt_left" headers="abstract">Much SDT research in the language learning domain focuses on the learning of English as a second or foreign language, in many cases by undergraduate students. By contrast, our work focuses on adolescent learners (aged between 11 and 16) of what are termed Modern Foreign Languages—languages other than English—in schools in England. In this context, school-level policy means that language learning is often optional for students beyond the age of 14, and this optionality makes motivation critical. In this article, we suggest that Self-Determination Theory provides a suitable framework for measuring the motivation of such students and compare it with the well-known Second Language Motivation Self-System (L2MSS) developed by Dörnyei. We draw on data from two large-scale studies of school students in England (N1 = 666; N2 = 1797), the first to use the Self-Regulation Questionnaire (Academic) in this context, and a smaller pilot study (N = 338), similarly the first to use the L2MSS in this context, and argue that SDT provides a more useful lens for studying motivation in English schools. As the L2MSS relies heavily on the learner’s Ideal Self, a version of themselves who can communicate competently in the target language, we argue that it is not suitable for use with learners in this context, although there is scope to incorporate some elements of it. SDT’s lack of focus on the target language community, which is not always within reach for students, allows it to better access students’ motivation for study. We consider the implications for future studies of student motivation in an English context, as well as other Anglophone settings.</td>
+<td class="gt_row gt_left" headers="source_display_name">Journal for the Psychology of Language Learning</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
 </section>
 <section id="visualising" class="level1">
 <h1>Visualising</h1>
 <p>We can plot publication years:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>dates <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(dates)</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(dates, <span class="fu">aes</span>(<span class="at">x =</span> dates)) <span class="sc">+</span></span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">fill =</span><span class="st">"darkgreen"</span>) <span class="sc">+</span></span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>dates <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(dates)</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(dates, <span class="fu">aes</span>(<span class="at">x =</span> dates)) <span class="sc">+</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">fill =</span><span class="st">"darkgreen"</span>) <span class="sc">+</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>`stat_bin()` using `bins = 30`. Pick better value `binwidth`.</code></pre>
 </div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="API_systematic_search_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="API_systematic_search_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
